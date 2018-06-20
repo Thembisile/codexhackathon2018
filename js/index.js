@@ -13,7 +13,10 @@ var resortsFactory = function (resortsArrayData) {
         //call the displayResorts function with the array from the above line.
     }
 
-    var sortByRating = function () {
+    var sortByRating = function (arrayToSort) {
         //sort the arrays by user rating from highest to lowest and call the displayResorts function with the sorted array
+        let arrayByRating =  arrayToSort.sort(function(a,b){
+            return b.rating - a.rating})
+        };
+
     }
-}

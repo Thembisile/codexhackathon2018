@@ -14,18 +14,45 @@
 <body>
   <div class="container">
     <div class="card">
-      <img src="./113954776.jpg" alt="John" style="width:100%">
+      <a href="#" class="previous round back">&#8249;</a>
+      <img src="./blue.jpg" alt="resPic" style="width:90%">
+      <a href="#" class="next round forward">&#8250;</a>
       <p><i class="arrow left"></i><i class="arrow right"></i></p>
       <h2>Monkey Valley Resort</h2>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-      <p class="title">This upscale resort, nestled in a forest and overlooking the Atlantic Ocean, is 5 km from Chapman's Peak. It's also 16 km from World of Birds Wildlife Sanctuary. </p>
+      <p>Overall review</p>
+      <div class="">
+      <span class="fa fa-star checked" data-rating="1"></span>
+      <span class="fa fa-star checked" data-rating="2"></span>
+      <span class="fa fa-star checked" data-rating="3"></span>
+      <span class="fa fa-star" data-rating="4"></span>
+      <span class="fa fa-star" data-rating="5"></span>
+      </div>
+
+      <!-- Trigger/Open The Modal -->
+        <p><button>Book</button>    <button id="myBtn">Rate</button></p>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Have you been here before?</h2>
+          <h4>How would you rate your experience here?</h4>
+          <div class="stars">
+          <span class="star fa fa-star rating" data-rating="1"></span>
+          <span class="star fa fa-star rating" data-rating="2"></span>
+          <span class="star fa fa-star rating" data-rating="3"></span>
+          <span class="star fa fa-star rating" data-rating="4"></span>
+          <span class="star fa fa-star rating" data-rating="5"></span>
+          </div>
+          <button type="button" name="submit">Submit</button>
+        </div>
+
+      </div>
 
 
-      <p><button>Contact</button></p>
+
     </div>
 
     <div class="info-Disp">
@@ -39,19 +66,19 @@
 
       <div class="gallery">
         <a target="_blank" href="fjords.jpg">
-    <img src="./113954776.jpg" alt="img-1" width="300" height="200">
+    <img src="./blue.jpg" alt="img-1" width="300" height="200">
   </a>
       </div>
 
       <div class="gallery">
         <a target="_blank" href="fjords.jpg">
-    <img src="./113954776.jpg" alt="img-2" width="300" height="200">
+    <img src="./blue.jpg" alt="img-2" width="300" height="200">
   </a>
       </div>
 
       <div class="gallery">
         <a target="_blank" href="fjords.jpg">
-    <img src="./113954776.jpg" alt="img-3" width="300" height="200">
+    <img src="./blue.jpg" alt="img-3" width="300" height="200">
   </a>
       </div>
     </div>
@@ -125,6 +152,7 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="./js/logic.js"></script>
 </body>
 
 </html>

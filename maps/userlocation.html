@@ -1,0 +1,43 @@
+<!-- This code here is for showing the location of the user and show it on a map -->
+
+<!doctype html5>
+<html>
+    <head>
+        <title>Resort Map</title>
+        <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+        <script>
+            x = navigator.geolocation;
+            x.getCurrentPosition(pass,fail);
+            function pass(position){
+                let userLatitude = position.coords.latitude;
+                let userLongitude = position.coords.longitude;       
+    // create map 
+    let coords = new google.maps.LatLng(userLatitude,userLongitude)
+    let mapOptions = {
+         zoom :16,
+         center:coords,
+         mapTypeId:google.maps.MapTypeId.ROADMAP
+     }
+
+     let userMap = new google.maps.Map(document.getElementById("map"), mapOptions);
+    let userMarker = new google.maps.Marker({map:userMap,position:coords,title:"You are here"});
+
+    // this code will be for the resort's marker and have the two markers on the same map should  user want to see how far they are
+    // let resortMarker = new google.maps.Marker({map:userMap,position:resortCoord})
+ };
+            function fail(){
+                //send out a message for the user
+            };
+        
+        </script>
+        <style>
+            #map{
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+    
+    </head>
+<!-- map will show on this div -->
+    <div id="map"></div>
+</html>
